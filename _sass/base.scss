@@ -83,6 +83,8 @@ input[type=submit]:hover { color: var(--background-color); background-color: var
 *:focus { outline: none; }
 textarea { vertical-align: top; }
 
+code { color: var(--primary-color); }
+
 .task-list-item-checkbox {
   display: inline-block;
   -webkit-appearance: checkbox;
