@@ -11,15 +11,11 @@ $base-line-height:     1.5 !default;
 $container-width:      90% !default;
 $container-max-width:  600px !default;
 
-$selection-background: $primary-color !default;
-$selection-text:       #000 !default;
-$header-color: #70b950;
-$list-point-color: #8197bf;
 /**
  * Global
  */
 body { background-color: var(--background-color);  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
-h1, h2, h3, h4, h5, h6 { font-size: $base-font-size;  margin: 0px;  margin-top: 22px;  font-weight: bold;  color: var(--text-color); }
+h1, h2, h3, h4, h5, h6 { font-size: $base-font-size;  margin: 0px;  margin-top: 22px;  font-weight: bold;  color: var(--header-color); }
 p, ul, ol { margin: 0px;  color: var(--text-color); }
 a { text-decoration: underline;  color: var(--link-color); }
 a:hover { color: var(--background-color); background-color: var(--base-color); }
@@ -59,10 +55,10 @@ footer { margin-bottom: 20px; }
  * Lists
  */
 :not(.menu) > ul { list-style: none;  padding-left: 0; list-style-type: none; }
-:not(.menu) > ul > li:before { content: "*"; color: $list-point-color; margin-right: 9px; }
+:not(.menu) > ul > li:before { content: "*"; color: var(--list-point-color); margin-right: 9px; }
 :not(.menu) > ol { list-style: none;  padding-left: 0; counter-reset: li }
 :not(.menu) > ol ol { padding-left: 2em }
-:not(.menu) > ol > li:before { content: counter(li) "."; color: $list-point-color; margin-right: 9px; counter-increment: li }
+:not(.menu) > ol > li:before { content: counter(li) "."; color: var(--list-point-color); margin-right: 9px; counter-increment: li }
 
 /**
  * Header/Navigation
@@ -132,7 +128,7 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .highlight .kt { color: #ffb964 } /* Keyword.Type */
 .highlight .m { color: #009999 } /* Literal.Number */
 .highlight .s { color: #99ad6a } /* Literal.String */
-.highlight .n { color: $base-color } /* ??Normal?? */
+.highlight .n { color: var(--base-color) } /* ??Normal?? */
 .highlight .na { color: #008080 } /* Name.Attribute */
 .highlight .nb { color: #ffb964; font-weight: bold } /* Name.Builtin */
 .highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
