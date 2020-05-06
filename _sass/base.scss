@@ -11,6 +11,10 @@ $base-line-height:     1.5 !default;
 $container-width:      90% !default;
 $container-max-width:  600px !default;
 
+$selection-background: $primary-color !default;
+$selection-text:       #000 !default;
+$header-color: #70b950;
+$list-point-color: #8197bf;
 /**
  * Global
  */
@@ -20,12 +24,26 @@ p, ul, ol { margin: 0px;  color: var(--text-color); }
 a { text-decoration: underline;  color: var(--link-color); }
 a:hover { color: var(--background-color); background-color: var(--base-color); }
 @media only screen and (max-device-width: 500px) { * { font-size: $mobile-font-size !important; } }
+h1:before { content: "#";  margin-right: 9px; }
+h2:before { content: "##";  margin-right: 9px; }
+h3:before { content: "###";  margin-right: 9px; }
+h4:before { content: "####";  margin-right: 9px; }
+h5:before { content: "#####";  margin-right: 9px; }
+h6:before { content: "######";  margin-right: 9px; }
+
+//strong:before, strong:after {content: "**"}
+//em:before, em:after {content: "_"}
+
+//h1 { border-bottom: 0.1em dashed; margin-bottom: 0.3em; padding-bottom: 0.35em; }
+
+hr { border: none; border-top: var(--border); }
 
 /**
  * Layout
  */
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
-p { word-wrap: break-word;  word-break: break-word;  white-space: pre-wrap; margin-bottom: 15px; }
+.highlighter-rogue { max-width: $container-max-width; overflow-x: scroll; }
+p { word-wrap: break-word;  word-break: break-word;  white-space: pre-wrap; margin-bottom: 1em;}
 footer { color: var(--text-color);  border-top: var(--border);  margin: 20px auto 15px;  padding-top: 10px;  text-align: right; }
 header { margin-top: 25px;  margin-bottom: 10px; }
 header p { text-align: left;  margin: 0; }
@@ -40,9 +58,11 @@ footer { margin-bottom: 20px; }
 /**
  * Lists
  */
-:not(.menu) > ul { list-style: none;  padding-left: 0; }
-:not(.menu) > ul { list-style-type: none; }
-:not(.menu) > ul > li:before { content: "-";  margin-right: 9px; }
+:not(.menu) > ul { list-style: none;  padding-left: 0; list-style-type: none; }
+:not(.menu) > ul > li:before { content: "*"; color: $list-point-color; margin-right: 9px; }
+:not(.menu) > ol { list-style: none;  padding-left: 0; counter-reset: li }
+:not(.menu) > ol ol { padding-left: 2em }
+:not(.menu) > ol > li:before { content: counter(li) "."; color: $list-point-color; margin-right: 9px; counter-increment: li }
 
 /**
  * Header/Navigation
@@ -51,7 +71,7 @@ footer { margin-bottom: 20px; }
 .menu ul { margin-top: 12px;  margin-bottom: 12px;  padding-left: 0px;  list-style-type: none;  text-align: right; }
 .menu ul li { display: inline;  margin-left: 10px; }
 .menu ul li a { text-decoration: none;  color: var(--text-color); }
-.menu ul li a:hover { text-decoration: none; color: var(--background-color); background-color: var(--base-color); }
+.menu ul li a:hover { text-decoration: none; color: var(--background-color); background-color: var(--primary-color); }
 
 /**
  * Form
@@ -66,6 +86,17 @@ input[type=submit] { font-size: $base-font-size;  font-family: $base-font-family
 input[type=submit]:hover { color: var(--background-color); background-color: var(--base-color); }
 *:focus { outline: none; }
 textarea { vertical-align: top; }
+
+.task-list-item-checkbox {
+  display: inline-block;
+  -webkit-appearance: checkbox;
+  -ms-transform: scale(0.75); /* IE */
+  -moz-transform: scale(0.75); /* FF */
+  -webkit-transform: scale(0.75); /* Safari and Chrome */
+  -o-transform: scale(0.75); /* Opera */
+  transform: scale(0.75);
+  vertical-align: bottom;
+}
 
 /**
  * Code and syntax highlighting
