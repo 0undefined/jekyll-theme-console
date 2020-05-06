@@ -3,14 +3,15 @@
  */
 
 :root {
-  --base-color: #DBDBDB;
-  --border: dashed 1px rgba(219, 219, 219, 0.9);
-  --selection-background: rgba(219, 219, 219, 0.99);
-  --selection-text: #000;
-  --background-color: #000;
-  --text-color: var(--base-color);
-  --placeholder-color: var(--base-color);
+  --background-color: #1d1a21;
+  --base-color: #fff;
+  --primary-color: #5bf;
+  --border: dashed 0.1em var(--base-color);
   --link-color: var(--base-color);
+  --placeholder-color: var(--base-color);
+  --selection-background: var(--primary-color);
+  --selection-text: #000;
+  --text-color: var(--base-color);
   --code-color-1: #aaaaaa;
   --code-color-2: #ffffcc;
   --code-color-3: #F00000;
