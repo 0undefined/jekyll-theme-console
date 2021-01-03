@@ -3,18 +3,21 @@
  */
 
 :root {
+  /* Color definitions */
   --background-color: #1d1a21;
-  --base-color: #fff;
-  --primary-color: #5bf;
-  --secondary-color: #666;
-  --border: dashed 2pt var(--secondary-color);
-  --link-color: var(--base-color);
-  --placeholder-color: var(--base-color);
+  --base-color:       #fff;
+  --primary-color:    #5bf;
+  --secondary-color:  #666;
+  /* Thematic colors */
+  --border:               dashed 2pt var(--secondary-color);
+  --header-color:         #70b950;
+  --link-color:           var(--base-color);
+  --list-point-color:     #8197bf;
+  --placeholder-color:    var(--base-color);
   --selection-background: var(--primary-color);
-  --selection-text: #000;
-  --text-color: var(--base-color);
-  --header-color: #70b950;
-  --list-point-color: #8197bf;
+  --selection-text:       var(--background-color);
+  --text-color:           var(--base-color);
+
 
   --code-color-1: #aaaaaa;
   --code-color-2: #ffffcc;
