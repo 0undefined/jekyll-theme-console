@@ -6,7 +6,8 @@
   --background-color: #1d1a21;
   --base-color: #fff;
   --primary-color: #5bf;
-  --border: dashed 0.1em var(--base-color);
+  --secondary-color: #666;
+  --border: dashed 2pt var(--secondary-color);
   --link-color: var(--base-color);
   --placeholder-color: var(--base-color);
   --selection-background: var(--primary-color);
